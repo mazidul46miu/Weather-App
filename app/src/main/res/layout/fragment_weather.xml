@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:src="@drawable/img"></ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:layout_marginRight="60dp">
+
+
+            <TextView
+                android:id="@+id/cityTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/teal_200"
+                android:textSize="30sp"
+                tools:text="Dhaka,BD" />
+
+            <TextView
+                android:id="@+id/dateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cityTv"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="20sp"
+                tools:text="January-17-202" />
+
+            <TextView
+                android:id="@+id/temperatureTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateTv"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:textAlignment="center"
+                android:textSize="50sp"
+                android:textStyle="bold"
+                tools:text="27" />
+
+            <TextView
+                android:id="@+id/fellTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/temperatureTv"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="16sp"
+                tools:text="Feels like 19C" />
+
+            <TextView
+                android:id="@+id/maxTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PressureTV"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:textSize="16sp"
+                tools:text="Max: 27C,"
+                android:textStyle="italic"/>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/PressureTV"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/arrow_drop_up_24"></ImageView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/PressureTV"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="225dp"
+                android:src="@drawable/arrow_drop_down_24">
+            </ImageView>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/tempUnitSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textOff="C"
+                android:textOn="F"
+                android:layout_marginTop="-10dp"
+                app:showText="true"></androidx.appcompat.widget.SwitchCompat>
+
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/maxTV"
+                android:src="@drawable/weather"></ImageView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/forecastRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="112dp" />
+
+            <TextView
+                android:id="@+id/sunny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/underLineTV"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                tools:text="Sunny, ClearSky"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/underLineTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fellTV"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"
+                android:text="----------------------------"></TextView>
+
+            <TextView
+                android:id="@+id/HumidityTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sunny"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:textSize="24sp"
+                tools:text="Humidity" />
+
+            <TextView
+                android:id="@+id/PressureTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/HumidityTV"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                tools:text="Pressure" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</layout>
